@@ -1,0 +1,17 @@
+{
+  "name": "rake-mail",
+  "version": "1.0.0",
+  "description": "Rake for mail.",
+  "main": "index.rake",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/rake-mail.git"
+  },
+  "keywords": ["rake", "task"],
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/rake-mail/issues"
+  },
+  "homepage": "https://github.com/afeiship/rake-mail#readme"
+}

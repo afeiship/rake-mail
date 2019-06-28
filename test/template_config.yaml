@@ -1,0 +1,16 @@
+smtp_config:
+  :address: 'smtp.exmail.qq.com'
+  :port: 25
+  :domain: 'exmail.qq.com'
+  :user_name: 'noreply@demo.com'
+  :password: '123123'
+  :enable_starttls_auto: true
+  :openssl_verify_mode: 'none'
+
+template: './test/mail.html.erb'
+
+mailto:
+  - 1290657123@qq.com
+
+mailcc:
+  - afeiship@163.com
