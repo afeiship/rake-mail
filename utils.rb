@@ -3,8 +3,6 @@ require "erb"
 
 MAIL_CONFIG = YAML.load(File.read("test/mail.yaml"))
 
-p MAIL_CONFIG
-
 module Utils
   def erb(template, vars)
     ERB.new(template).result(OpenStruct.new(vars).instance_eval { binding })
