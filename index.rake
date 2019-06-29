@@ -10,8 +10,8 @@ namespace :mail do
   desc "deliver to somebody"
   task :deliver, [:name, :content] do |task, args|
     args.with_defaults(
-      name: pkg["name"],
-      content: `git log --pretty=format:"%an: %s" -10`,
+      name: MAIL_CONFIG["mail"][:name],
+      content: `git log --pretty=format:"%an: %s" -#{MAIL_CONFIG["mail"][:size]}`,
     )
     send_mail({ name: args[:name], content: args[:content] })
   end

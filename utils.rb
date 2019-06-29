@@ -1,7 +1,7 @@
 require "mail"
 require "erb"
 
-MAIL_CONFIG = YAML.load(File.read("test/mail.yaml"))
+MAIL_CONFIG = YAML.load(File.read("build/mail.yaml"))
 
 module Utils
   def erb(template, vars)
@@ -18,7 +18,7 @@ module Utils
 
       html_part do
         content_type "text/html; charset=UTF-8"
-        body erb(File.read(MAIL_CONFIG["template"]), data)
+        body erb(File.read(MAIL_CONFIG["mail"][:template]), data)
       end
     end
     mail.deliver!
