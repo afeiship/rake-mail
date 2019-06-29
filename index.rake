@@ -11,8 +11,9 @@ namespace :mail do
   task :deliver, [:name, :content] do |task, args|
     args.with_defaults(
       name: MAIL_CONFIG["mail"][:name],
+      pkg: pkg,
       content: `git log --pretty=format:"%an: %s" -#{MAIL_CONFIG["mail"][:size]}`,
     )
-    send_mail({ name: args[:name], content: args[:content] })
+    send_mail({ name: args[:name], content: args[:content], pkg: args[:pkg] })
   end
 end
