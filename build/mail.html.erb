@@ -47,6 +47,11 @@
   <div class="mail__body">
     <div class="mail__body-inner">
       <h3 class="mail__git-title">🤪最近更新内容</h3>
+
+      <div class="mail__version">
+        <p><strong>当前版本：</strong> <span> <%= pkg["version"] %> </span></p>
+      </div>
+
       <% content.split("\n").each do |item| %>
       <p class="mail__git-item"><%= item %></p>
       <% end %>
