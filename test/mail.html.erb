@@ -1,6 +1,33 @@
-<div style="width:900px; margin: 20px auto;">
-  <h2>Dear <%= name %>,</h2>
-  <div style="color:#999; background:#fefefe; text-align:right;">
+<style>
+.mail__container{
+  font-family:PingFangSC-Light;
+  width:900px; 
+  margin:20px auto 0;
+}
+.mail__title{
+  font-size:16px;
+  
+}
+.mail__body{
+  padding: 10px;
+  margin: 10px auto;
+  border:1px dashed #ddd;
+  background: whitesmoke;
+}
+.mail__footer{
+  color:#999;
+  font-size: 12px;
+  line-height: 16px;
+  background:#fefefe; 
+  text-align:right;
+}
+</style>
+<div class="mail__container">
+  <h2 class="mail__title">Dear <%= name %>,</h2>
+  <div class="mail__body">
+    <%= content %>
+  </div>
+  <div class="mail__footer">
     Thanks,<br>
     From TSS WFE team <br>
     Auto deliver, do not reply.
