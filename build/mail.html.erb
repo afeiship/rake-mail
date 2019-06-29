@@ -34,6 +34,18 @@
   color: #333;
   margin: 0 auto 6px;
 }
+.mail__git-version{
+  background: #6194e7;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #fff;
+  float: right;
+  font-size: 12px;
+}
+.mail__git-version.is--prod{
+  background: #fb6668
+}
+
 .mail__footer{
   color:#666;
   font-size: 12px;
@@ -46,11 +58,10 @@
   <h2 class="mail__title">Dear <%= name %>,</h2>
   <div class="mail__body">
     <div class="mail__body-inner">
-      <h3 class="mail__git-title">🤪最近更新内容</h3>
-
-      <div class="mail__version">
-        <p><strong>当前版本：</strong> <span> <%= pkg["version"] %> </span></p>
-      </div>
+      <h3 class="mail__git-title">
+        <span class="mail__git-version <%= pkg["version"].include?("alpha") ? '' : 'is--prod' %>">v<%= pkg["version"] %> </span>
+        <strong>🤪最近更新内容</strong>
+      </h3>
 
       <% content.split("\n").each do |item| %>
       <p class="mail__git-item"><%= item %></p>
