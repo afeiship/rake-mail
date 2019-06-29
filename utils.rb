@@ -12,9 +12,9 @@ module Utils
     Mail.defaults { delivery_method :smtp, MAIL_CONFIG["smtp_config"] }
     mail = Mail.new do
       from MAIL_CONFIG["smtp_config"][:user_name]
-      to MAIL_CONFIG["mailto"]
-      cc MAIL_CONFIG["mailcc"]
-      subject "来自Mailer自动发布脚本"
+      to MAIL_CONFIG["mail"][:to]
+      cc MAIL_CONFIG["mail"][:cc]
+      subject MAIL_CONFIG["mail"][:subject]
 
       html_part do
         content_type "text/html; charset=UTF-8"

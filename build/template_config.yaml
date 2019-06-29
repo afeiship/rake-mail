@@ -7,10 +7,12 @@ smtp_config:
   :enable_starttls_auto: true
   :openssl_verify_mode: 'none'
 
-template: './test/mail.html.erb'
-
-mailto:
-  - 1290657123@qq.com
-
-mailcc:
-  - afeiship@163.com
+mail: 
+  :template: './build/mail.html.erb'
+  :name: "Guys"
+  :subject: "来自Mailer自动发布脚本"
+  :size: 10
+  :to:
+    - 1290657123@qq.com
+  :cc:
+    - afeiship@163.com
