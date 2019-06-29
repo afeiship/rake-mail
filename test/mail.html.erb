@@ -1,7 +1,7 @@
 <style>
 .mail__container{
   font-family:PingFangSC-Light;
-  width:900px; 
+  max-width:800px; 
   margin:20px auto 0;
 }
 .mail__title{
@@ -9,13 +9,33 @@
   
 }
 .mail__body{
-  padding: 10px;
-  margin: 10px auto;
-  border:1px dashed #ddd;
-  background: whitesmoke;
+  padding: 14px;
+  margin: 0 auto 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background:url(http://ww1.sinaimg.cn/large/006BC6kqly1g4hzfk4op7j302s02sjr6.jpg);
+}
+.mail__body-inner{
+  background: rgba(255,255,255,0.94);
+  padding: 14px;
+  min-height: 150px;
+  border-radius: 10px;
+}
+.mail__git-title{
+  font-size: 14px;
+  border-bottom: 1px dotted #007aff;
+  margin: 0 auto 10px;
+  padding: 0 0 10px;
+}
+.mail__git-item{
+  padding-left: 10px;
+  border-left: 3px solid #007aff;
+  line-height: 20px;
+  color: #333;
+  margin: 0 auto 6px;
 }
 .mail__footer{
-  color:#999;
+  color:#666;
   font-size: 12px;
   line-height: 16px;
   background:#fefefe; 
@@ -25,7 +45,12 @@
 <div class="mail__container">
   <h2 class="mail__title">Dear <%= name %>,</h2>
   <div class="mail__body">
-    <%= content %>
+    <div class="mail__body-inner">
+      <h3 class="mail__git-title">🤪最近更新内容</h3>
+      <% content.split("\n").each do |item| %>
+      <p class="mail__git-item"><%= item %></p>
+      <% end %>
+    </div>
   </div>
   <div class="mail__footer">
     Thanks,<br>

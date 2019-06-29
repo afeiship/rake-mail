@@ -11,7 +11,7 @@ namespace :mail do
   task :deliver, [:name, :content] do |task, args|
     args.with_defaults(
       name: pkg["name"],
-      content: pkg["description"],
+      content: `git log --pretty=format:"%an: %s" -10`,
     )
     send_mail({ name: args[:name], content: args[:content] })
   end
