@@ -1,5 +1,5 @@
 require "json"
-require "./utils"
+require_relative "./utils"
 include Utils
 
 pkg = JSON.load File.open "./package.json"
