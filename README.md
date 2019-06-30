@@ -1,11 +1,11 @@
-# rake-mail
-> Rake for mail.
-
 <p align="center">
   <a href="https://github.com/afeiship/rake-mail">
     <img width="500" src="http://ww2.sinaimg.cn/large/006tNc79gy1g4jm7ivt9ej30sa0xyjyk.jpg">
   </a>
 </p>
+
+# rake-mail
+> Rake for mail.
 
 ## installation
 ```bash
