@@ -12,8 +12,8 @@ module Utils
     Mail.defaults { delivery_method :smtp, MAIL_CONFIG["smtp_config"] }
     mail = Mail.new do
       from MAIL_CONFIG["smtp_config"][:user_name]
-      to MAIL_CONFIG["mail"][:to]
-      cc MAIL_CONFIG["mail"][:cc]
+      to MAIL_CONFIG["receiver"][:to]
+      cc MAIL_CONFIG["receiver"][:cc]
       subject MAIL_CONFIG["mail"][:subject]
 
       html_part do
