@@ -1,9 +1,9 @@
 # rake-mail
 > Rake for mail.
 
-<p style="text-align: center;">
-    <img width="400" src="http://ww2.sinaimg.cn/large/006tNc79gy1g4jm7ivt9ej30sa0xyjyk.jpg">
-</p>
+<center>
+    <img width="500" src="http://ww2.sinaimg.cn/large/006tNc79gy1g4jm7ivt9ej30sa0xyjyk.jpg">
+</center>
 
 ## installation
 ```bash
