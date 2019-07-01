@@ -44,6 +44,9 @@
   display: flex;
   align-items: center;
 }
+.mail__git-version em{
+  margin-right: 4px;
+}
 .mail__git-version img{
   width: 14px;
 }
@@ -65,7 +68,7 @@
     <div class="mail__body-inner">
       <h3 class="mail__git-title">
         <span class="mail__git-version <%= is_dev ? '' : 'is--prod' %>"> 
-          v<%= pkg["version"] %> <%= prefix %>
+          <em>v<%= pkg["version"] %></em> <%= prefix %>
         </span>
         <strong>🤪最近更新内容</strong>
       </h3>
